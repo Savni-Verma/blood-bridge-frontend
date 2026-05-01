@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --red: #E53E3E;
+  --red-dark: #C53030;
+  --red-light: #FFF5F5;
+  --red-soft: #FED7D7;
+  --white: #FFFFFF;
+  --gray-100: #F7FAFC;
+  --gray-200: #EDF2F7;
+  --gray-400: #A0AEC0;
+  --gray-600: #718096;
+  --gray-800: #2D3748;
+  --black: #1A202C;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--red-light);
+  color: var(--black);
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+button {
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+input, select {
+  font-family: 'DM Sans', sans-serif;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease forwards;
+}
