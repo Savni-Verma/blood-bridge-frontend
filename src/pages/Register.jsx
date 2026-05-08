@@ -10,15 +10,18 @@ function Register() {
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
-
-  const handleRegister = async (e) => {
+  
+const handleRegister = async (e) => {
     e.preventDefault()
     setLoading(true)
+    console.log("Register clicked!") // add karo
     try {
       const res = await registerUser({ name, email, password, phoneNumber: phone })
+      console.log("Response:", res.data) // add karo
       localStorage.setItem('user', JSON.stringify(res.data))
       navigate('/dashboard')
     } catch (err) {
+      console.log("Error:", err) // add karo
       setError(err.response?.data?.message || 'Registration failed!')
     } finally {
       setLoading(false)

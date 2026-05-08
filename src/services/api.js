@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-    baseURL: 'http://localhost:8080'
+    baseURL:  'http://51.21.227.69:8080'
 });
 
 // Har request mein token automatically add karo
